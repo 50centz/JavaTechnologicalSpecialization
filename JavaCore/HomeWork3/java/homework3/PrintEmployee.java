@@ -17,10 +17,16 @@ public class PrintEmployee implements Iterable<Employee>{
         return employeeList.iterator();
     }
 
-    public void printEmployee(){
-        for (Employee e: employeeList) {
-            System.out.println(e);
 
+
+    public void printEmployee(){
+//        for (Employee e: employeeList) {
+//            System.out.println(e);
+//
+//        }
+        Iterator<Employee> iter = employeeList.iterator();
+        while (iter.hasNext()){
+            System.out.println(iter.next());
         }
     }
 
