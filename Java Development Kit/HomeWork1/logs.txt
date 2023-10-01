@@ -1,0 +1,32 @@
+2023-10-01 17:27:40: Server started
+2023-10-01 17:28: Server is already running
+2023-10-01 17:28:01: Server is already running
+2023-10-01 17:28:02: Server is already running
+2023-10-01 17:28:02: Server is already running
+2023-10-01 17:28:02: Server is already running
+2023-10-01 17:28:03: Server is already running
+2023-10-01 17:28:03: Server is already running
+2023-10-01 17:28:14: Server started
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+Enter your login: hfghgf
+2023-10-01 17:29:24: Server started
+Enter your login: 
+Enter your login: 
+Enter your login: 
+2023-10-01 17:29:59: Server started
+Enter your login: fdsgfg
+Enter your login: 
+Enter your login: 
+Enter your login: fdgfdg
+Enter your login: gdfgdfg
+Enter your login: gdfgdfg
+Enter your login: gdfgdz
+Enter your login: ghdfgjhsrth
+2023-10-01 17:30:16: Server stopped
