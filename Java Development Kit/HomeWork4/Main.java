@@ -11,13 +11,20 @@ public class Main {
                 "000003", "2017-2020");
         Employee employee4 = new Employee("Антон", "12848963",
                 "000004", "2014-2020");
+        Employee employee5 = new Employee("Сергей", "128489634456",
+                "000005", "2014-2020");
 
         employeeDirectory.add(employee1);
         employeeDirectory.add(employee2);
         employeeDirectory.add(employee3);
         employeeDirectory.add(employee4);
+        employeeDirectory.add(employee5);
 
         employeeDirectory.lookingEmployeeByExperience("2019-2020");
+        System.out.println();
+        employeeDirectory.lookingEmployeeByExperience("2014-2020");
+        System.out.println();
+        employeeDirectory.lookingEmployeeByExperience("2019-2021");
         System.out.println();
         employeeDirectory.displaysEmployeePhoneNumberByName("Николай");
         System.out.println();

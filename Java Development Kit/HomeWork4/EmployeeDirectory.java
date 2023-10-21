@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class EmployeeDirectory {
     private LinkedList<Employee> listEmployee;
@@ -27,14 +29,24 @@ public class EmployeeDirectory {
         listEmployee.remove(employee);
     }
 
-    public void lookingEmployeeByExperience(String experience){
+     public void lookingEmployeeByExperience(String experience){
+        List<Employee> list = new ArrayList<>();
+
         for (Employee user : listEmployee) {
             if (user.getExperience(experience).equals(experience)){
-                printEmployee(user);
-                return;
+                list.add(user);
             }
         }
+        if (list.size() > 0){
+            for (Employee employee : list) {
+                printEmployee(employee);
+            }
+        }else {
+            System.out.println("There is no employee with such experience");
+        }
+
     }
+    
     public void addPhoneNumber(String name, String phoneNumber){
         for (Employee user : listEmployee) {
             if (user.getName().equals(name)){
