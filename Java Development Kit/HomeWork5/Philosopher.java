@@ -45,11 +45,11 @@ public class Philosopher extends Thread{
         System.out.println(name + ": я наелся и надумался ха-ха-ха");
     }
 
-    public boolean getFork() {
+    public synchronized boolean getFork() {
         return fork;
     }
 
-    public void setFork(boolean fork) {
+    public synchronized void setFork(boolean fork) {
         this.fork = fork;
     }
 
