@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<form action="#" th:action="@{/viewing-tasks-by-status/{status}}" th:object="${status}" method="get">-->
+
+<!--    <label for="status">Task status: </label>-->
+<!--    <select id="status" name="taskStatus">-->
+<!--        <option th:each="enumm : ${T(ru.geekbrains.homework5.models.TaskStatus).values()}"-->
+<!--                th:text="${enumm}"-->
+<!--                th:value = "${enumm}">-->
+<!--        </option>-->
+<!--    </select>-->
+
+<!--    <br/>-->
+<!--&lt;!&ndash;    <input type="submit" value="Create task">&ndash;&gt;-->
+<!--    <a th:href="@{viewing-tasks-by-status/{status}(status=${enumm})}">Show</a>-->
+<!--</form>-->
+
+<!--<td><a th:href="@{viewing-tasks-by-status/{status}(status=${0})}">Show NOT_STARTED</a></td><br/>-->
+<!--<td><a th:href="@{viewing-tasks-by-status/{status}(status=${1})}">Show IN_PROGRESS</a></td><br/>-->
+<!--<td><a th:href="@{viewing-tasks-by-status/{status}(status=${2})}">Show COMPLETED</a></td><br/>-->
+<!--<td><a th:href="@{user-delete/{id}(id=${user.id})}">Delete</a></td>-->
+
+<div th:switch="${tasks}">
+    <h2 th:case="null">No tasks found!</h2>
+    <div th:case="*">
+        <h2>Tasks</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Date of created</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="task : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.taskStatus}"></td>
+                <td th:text="${task.dateOfCreated}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

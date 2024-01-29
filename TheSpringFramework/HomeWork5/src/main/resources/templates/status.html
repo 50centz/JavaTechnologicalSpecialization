@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/task-create}" th:object="${task}" method="post">
+    <label for="status">Выберите статус: </label>
+    <select id="status" name="statusValue">
+        <option th:each="enumm : ${T(ru.geekbrains.homework5.models.TaskStatus).values()}"
+                th:text="${enumm}"
+                th:value = "${enumm}">
+        </option>
+    </select>
+    <input type="submit" value="Изменить статус">
+</form>
+</body>
+</html>
+
+
+<!--Второй вариант вывода Enum-->
+<!--<label for="taskStatus"> Task status</label>-->
+<!--<select id="taskStatus" name="taskStatus">-->
+<!--    <option value="NOT_STARTED" type="text" field="*{taskStatus}">NOT_STARTED</option>-->
+<!--    <option value="IN_PROGRESS">IN_PROGRESS</option>-->
+<!--    <option value="COMPLETED">COMPLETED</option>-->
+<!--</select>-->

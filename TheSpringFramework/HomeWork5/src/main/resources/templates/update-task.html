@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" th:action="@{/task-update}" th:object="${task}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="description">Description: </label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description"/>
+    <br/>
+    <label for="taskStatus">Task status: </label>
+    <select id="taskStatus" name="taskStatus">
+        <option th:each="enumm : ${T(ru.geekbrains.homework5.models.TaskStatus).values()}"
+                th:text="${enumm}"
+                th:value = "${enumm}">
+        </option>
+    </select>
+    <br/>
+    <input type="submit" value="Update task">
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create task</title>
+</head>
+<body>
+<form action="#" th:action="@{/task-create}" th:object="${task}" method="post">
+    <label for="description">Description: </label>
+    <input type="text" field="*{description}" id="description" placeholder="Description"/>
+    <br/>
+    <label for="taskStatus">Task status: </label>
+    <select id="taskStatus" name="taskStatus">
+        <option th:each="enumm : ${T(ru.geekbrains.homework5.models.TaskStatus).values()}"
+                th:text="${enumm}"
+                th:value = "${enumm}">
+        </option>
+    </select>
+
+    <br/>
+    <input type="submit" value="Create task">
+</form>
+
+</body>
+</html>
