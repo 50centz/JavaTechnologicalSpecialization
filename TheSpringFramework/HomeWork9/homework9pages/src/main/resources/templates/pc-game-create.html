@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create PC Game</title>
+</head>
+<body>
+<!--<form action="#" th:action="@{/pc-game-create}" th:object="${task}" method="post">-->
+<!--    <label for="title">Title: </label>-->
+<!--    <input type="text" th:field="*{title}" id="title" placeholder="Title"/>-->
+<!--    <br/>-->
+<!--    <label for="price">Price: </label>-->
+<!--    <input type=number th:field="*{price}" id="price" placeholder="Price"/>-->
+<!--    <select id="taskStatus" name="taskStatus">-->
+<!--        <option th:each="enumm : ${T(ru.geekbrains.homework5.models.TaskStatus).values()}"-->
+<!--                th:text="${enumm}"-->
+<!--                th:value = "${enumm}">-->
+<!--        </option>-->
+<!--    </select>-->
+
+<!--    <br/>-->
+<!--    <input type="submit" value="Create task">-->
+<!--</form>-->
+<form action="/pc-game-create" method="post">
+    Name: <input type="text" name="title"><br />
+    Price: <input type="number" step="any" name="price"><br />
+    <button type="submit">Add PC Game</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: HomePagePcGame
+
+#url:
+#  api:
+#    pcGameAll: http://192.168.77.128:8081/api/PcGame
